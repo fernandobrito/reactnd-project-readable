@@ -1,0 +1,9 @@
+#root .App-Content {
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  padding: 1em 3em 2em;
+}
+
+p, .ui.items>.item>.content>.description {
+  font-size: 1.33em;
+}

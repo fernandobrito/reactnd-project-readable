@@ -1,0 +1,31 @@
+{
+  "name": "reactnd-project-readable",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "history": "^4.6.3",
+    "lodash": "^4.17.4",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-redux-toastr": "^7.1.5",
+    "react-router-dom": "^4.1.2",
+    "react-router-redux": "^5.0.0-alpha.6",
+    "react-scripts": "1.0.10",
+    "react-timestamp": "^4.2.1",
+    "redux": "^3.7.2",
+    "redux-form": "^7.0.3",
+    "redux-thunk": "^2.2.0",
+    "revalidate": "^1.2.0",
+    "semantic-ui-react": "^0.71.3",
+    "uuid": "^3.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
