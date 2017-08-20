@@ -7,7 +7,7 @@ import { Label, Icon } from "semantic-ui-react";
 const PostCommentsCount = (props) => {
   let countValue;
 
-  if (!props.count) {
+  if (props.count === undefined) {
     countValue = <Icon name="spinner" loading />
   } else {
     countValue =<span>{props.count}</span>
