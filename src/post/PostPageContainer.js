@@ -6,11 +6,21 @@ import { withRouter } from "react-router-dom";
 import { retrievePost } from "./reducer";
 import { postSelector } from "./reducer";
 
+import { push } from 'react-router-redux';
+
 import PostPage from "./PostPage";
 
 class CategoryPageContainer extends Component {
   componentDidMount() {
     this.props.retrievePost(this.props.match.params.postId);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    // Post was deleted. Redirect user to category page
+    if (this.props.post && nextProps.post === undefined) {
+      alert("deleted");
+      this.props.redirectTo(`/${this.props.post.category}`);
+    }
   }
 
   render() {
@@ -25,12 +35,13 @@ class CategoryPageContainer extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    retrievePost
+    retrievePost,
+    redirectTo: path => push(path)
   }, dispatch)
 };
 
 const mapStateToProps = (state, ownProps) => ({
-  post: postSelector(state.posts, ownProps.match.params.postId),
+  post: postSelector(state.posts, ownProps.match.params.postId)
 });
 
 export default withRouter(

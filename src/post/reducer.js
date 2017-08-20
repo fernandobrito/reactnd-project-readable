@@ -3,7 +3,6 @@ import { toastr } from 'react-redux-toastr'
 import omit from 'lodash/omit';
 import merge from 'lodash/merge';
 import uuid from 'uuid/v4';
-import { push } from 'react-router-redux';
 
 import * as API from "../utils/api";
 
@@ -131,7 +130,6 @@ export function deletePost(postId, category) {
   return (dispatch) => {
     API.deletePost(postId)
       .then(() => {
-        dispatch(push(`/${category}`));
         dispatch({ type: DELETE, postId });
         toastr.success('Success', 'Post deleted successfully.');
       });
