@@ -2,6 +2,7 @@
   "name": "reactnd-project-readable",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://reactnd-readable-fernandobrito.herokuapp.com/",
   "dependencies": {
     "fetch": "^1.1.0",
     "history": "^4.6.3",

@@ -1,4 +1,4 @@
-const api = "http://localhost:5001";
+const api = process.env.REACT_APP_API_SERVER;
 
 // Generate a unique token for storing your bookshelf data on the backend server.
 let token = localStorage.token;
@@ -16,8 +16,6 @@ export const getCategories = () =>
   fetch(`${api}/categories/`, { headers })
     .then(response => response.json())
     .then(data => data.categories);
-
-
 
 /* POSTS */
 export const getPost = (postId) =>
