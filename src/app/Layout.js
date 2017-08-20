@@ -38,6 +38,23 @@ class Layout extends Component {
         <Segment className="App-Content" basic>
           <Segment color="blue">
             <Header as='h1'>Readable: a content and comment web app</Header>
+            <Header as="h4" disabled style={{ marginTop: 0 }}>
+              Created with React/Redux by &nbsp;
+              <a href="https://github.com/fernandobrito/"
+                 rel="noopener noreferrer"
+                 target="_blank" title="Github Profile">Fernando Brito</a>
+              &nbsp; as an assignment for the &nbsp;
+              <a href="https://udacity.com/course/react-nanodegree--nd019/"
+                 rel="noopener noreferrer"
+                 target="_blank" title="Udacity">Udacity React Nanodegree</a>
+              &nbsp; program.
+              Source code on &nbsp;
+              <a href="https://github.com/fernandobrito/reactnd-project-readable"
+                 rel="noopener noreferrer"
+                 target="_blank" title="Github repository">
+                <Icon name="github" style={{ marginRight: 0 }} />
+              </a>.
+            </Header>
           </Segment>
 
           {this.props.children}
