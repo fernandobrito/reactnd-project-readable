@@ -6,42 +6,42 @@ const defaultData = {
   "8xf0y6ziyjabvozdd253nd": {
     id: '8xf0y6ziyjabvozdd253nd',
     timestamp: 1467166872634,
-    title: 'Udacity is the best place to learn React',
-    body: 'Everyone says so after all.',
-    author: 'thingtwo',
+    title: '14 Keys to a Healthy Diet',
+    body: 'Awesome post about diets: http://www.berkeleywellness.com/healthy-eating/food/slideshow/14-keys-healthy-diet',
+    author: 'adietguy',
     category: 'diet',
     voteScore: 6,
-    deleted: false 
+    deleted: false
   },
   "8xf0y6ziyjabvozdd253nds": {
     id: '8xf0y6ziyjabvozdd253nds',
     timestamp: 1467166872634,
-    title: 'Udacity is the best place to learn React',
-    body: 'Everyone says so after all.',
-    author: 'thingtwo',
+    title: 'DAREBEE - Fitness Made Easy',
+    body: 'Hey guys, check out this awesome website for exercising. www.darebee.com',
+    author: 'fitnessrocks',
     category: 'exercises',
-    voteScore: 6,
-    deleted: false 
+    voteScore: 16,
+    deleted: false
   },
   "8xf0y6ziyjabvozdd253ndb": {
     id: '8xf0y6ziyjabvozdd253ndb',
     timestamp: 1467166872634,
-    title: 'Udacity is the best place to learn React',
-    body: 'Everyone says so after all.',
-    author: 'thingtwo',
-    category: 'meditation',
-    voteScore: 6,
-    deleted: false 
+    title: '50 Things to Make With Bacon : Recipes and Cooking',
+    body: "Can't wait to try them all! http://www.foodnetwork.com/recipes/articles/50-things-to-make-with-bacon",
+    author: 'opsreally',
+    category: 'diet',
+    voteScore: -9,
+    deleted: false
   },
 
   "6ni6ok3ym7mf1p33lnez": {
     id: '6ni6ok3ym7mf1p33lnez',
     timestamp: 1468479767190,
-    title: 'Learn Redux in 10 minutes!',
-    body: 'Just kidding. It takes more than 10 minutes to learn technology.',
+    title: 'Headspace: Meditation and mindfulness made simple',
+    body: "I've been using this meditation app and it's just awesome! www.headspace.com",
     author: 'thingone',
-    category: 'medtitation',
-    voteScore: -5,
+    category: 'meditation',
+    voteScore: 20,
     deleted: false
   }
 }
@@ -67,7 +67,7 @@ function get (token, id) {
   return new Promise((res) => {
     const posts = getData(token)
     res(
-      posts[id].deleted 
+      posts[id].deleted
         ? {}
         : posts[id]
     )
@@ -86,7 +86,7 @@ function getAll (token) {
 function add (token, post) {
   return new Promise((res) => {
     let posts = getData(token)
-    
+
     posts[post.id] = {
       id: post.id,
       timestamp: post.timestamp,
@@ -97,7 +97,7 @@ function add (token, post) {
       voteScore: 1,
       deleted: false
     }
-     
+
     res(posts[post.id])
   })
 }
