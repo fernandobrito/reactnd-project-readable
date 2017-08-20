@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Input } from 'semantic-ui-react';
 
-export default function semanticFormField ({ input, type, label, placeholder, meta: { touched, error, warning }, as: As = Input, ...props }) {
+export default function SemanticFormField ({ input, type, label, placeholder, meta: { touched, error, warning }, as: As = Input, ...props }) {
   function handleChange (event, { value }) {
     return input.onChange(value);
   }
@@ -16,7 +16,7 @@ export default function semanticFormField ({ input, type, label, placeholder, me
   );
 }
 
-semanticFormField.propTypes = {
+SemanticFormField.propTypes = {
   as: PropTypes.any,
   input: PropTypes.object,
   type: PropTypes.string,
