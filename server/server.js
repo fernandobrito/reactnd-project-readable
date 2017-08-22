@@ -7,10 +7,10 @@ const config = require('./config')
 const categories = require('./categories')
 const posts = require('./posts')
 const comments = require('./comments')
+var path = require('path')
 
 const app = express()
 
-app.use('/', express.static('react_build'))
 app.use(cors())
 
 
@@ -314,6 +314,12 @@ app.delete('/api/comments/:id', (req, res) => {
           }
       )
 })
+
+app.use(express.static('react_build'))
+
+app.get('*', function(req, res) {
+  res.sendFile(path.resolve(__dirname, 'react_build/index.html'));
+});
 
 app.listen(config.port, () => {
   console.log('Server listening on port %s, Ctrl+C to stop', config.port)
