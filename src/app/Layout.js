@@ -48,11 +48,12 @@ class Layout extends Component {
                  rel="noopener noreferrer"
                  target="_blank" title="Udacity">Udacity React Nanodegree</a>
               &nbsp; program.
-              Source code on &nbsp;
+              Source code and more details on &nbsp;
               <a href="https://github.com/fernandobrito/reactnd-project-readable"
                  rel="noopener noreferrer"
                  target="_blank" title="Github repository">
                 <Icon name="github" style={{ marginRight: 0 }} />
+                GitHub
               </a>.
             </Header>
           </Segment>
