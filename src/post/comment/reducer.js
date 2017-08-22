@@ -136,14 +136,15 @@ const INITIAL_STATE = {
 
 function commentsReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case RETRIEVE:
+    case RETRIEVE: {
       const commentsById = action.comments
-        .reduce((comments, comment) => (Object.assign(comments, { [comment.id]: comment })), {});
+        .reduce((comments, comment) => (Object.assign(comments, {[comment.id]: comment})), {});
 
       return {
         ...state,
         byId: commentsById
       };
+    }
     case VOTE:
       return {
         ...state,
@@ -176,7 +177,7 @@ function commentsReducer(state = INITIAL_STATE, action) {
       return Object.assign({}, state, { editingCommentId: null });
     case MODAL_VISIBILITY:
       return Object.assign({}, state, { isModalOpen: action.visibility });
-    default :
+    default:
       return state;
   }
 }

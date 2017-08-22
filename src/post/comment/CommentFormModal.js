@@ -27,7 +27,7 @@ class CommentFormModal extends Component {
 
     return (
       <CommentForm
-        ref={form => this.form = form}
+        ref={form => { this.form = form }}
         onSubmit={this.props.handleForm}
         onSubmitSuccess={this.handleModalClose}
         initialValues={initialValues}

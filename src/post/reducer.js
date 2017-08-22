@@ -58,7 +58,7 @@ export function retrievePostCommentsCount(postId) {
     API.getCommentsFromPost(postId)
       .then(comments => dispatch({
         type: RETRIEVE_COMMENTS_COUNT, postId,
-        commentsCount: comments.length,
+        commentsCount: comments.length
       }));
   };
 }
@@ -169,11 +169,12 @@ export default function postsReducer(state = INITIAL_STATE, action) {
   let updatedInfo;
 
   switch (action.type) {
-    case RETRIEVE_FROM_CATEGORY:
+    case RETRIEVE_FROM_CATEGORY: {
       const postsById = action.posts
-        .reduce((posts, post) => (Object.assign(posts, { [post.id]: post })), {});
+        .reduce((posts, post) => (Object.assign(posts, {[post.id]: post})), {});
 
-      return Object.assign({}, state, { byId: postsById });
+      return Object.assign({}, state, {byId: postsById});
+    }
     case RETRIEVE:
       return {
         ...state,
@@ -183,6 +184,7 @@ export default function postsReducer(state = INITIAL_STATE, action) {
         },
         selected: action.postId
       };
+
     case RETRIEVE_COMMENTS_COUNT:
       updatedInfo = { [action.postId]: { commentsCount: action.commentsCount } };
       return merge({}, state, { byId: updatedInfo });
