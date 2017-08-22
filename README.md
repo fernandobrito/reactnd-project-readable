@@ -15,7 +15,7 @@ Contact me on [Linkedin](https://www.linkedin.com/in/fernandosmbrito), or open a
 Built with React, Redux and React Router. This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 For this assignment there was no starter template provided (apart from the simple backend API).
 
-Hosted on: https://reactnd-readable-fernandobrito.herokuapp.com. Due to Heroku's limitation on their free account, it may take a few seconds to load the first request.
+Hosted on: https://reactnd-readable-fernandobrito.herokuapp.com. Due to Heroku's limitation on their free account, it may take a few extra seconds before the first request is served.
 
 ---
 
