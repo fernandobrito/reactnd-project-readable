@@ -1,9 +1,9 @@
 **Have a question or suggestion?**
 Contact me on [Linkedin](https://www.linkedin.com/in/fernandosmbrito), or open a pull request on this project.
 
----
-
 **Programming assignment for the [Udacity React Nanodegree](https://www.udacity.com/course/react-nanodegree--nd019) program.**
+
+---
 
 # Readable
 
@@ -17,7 +17,6 @@ For this assignment there was no starter template provided (apart from the simpl
 
 Hosted on: https://reactnd-readable-fernandobrito.herokuapp.com. Due to Heroku's limitation on their free account, it may take a few extra seconds before the first request is served.
 
----
 
 ## Limitations and things that are missing
 
@@ -27,7 +26,6 @@ The focus of the assignment was on functionality, rather than styling, so I did 
 
 Lastly, as this was a Redux assignment, it was required that **all** state lives inside Redux, even if it would make more sense to store it locally on a component.
 
----
 
 ## Stack
 
@@ -47,14 +45,12 @@ Lastly, as this was a Redux assignment, it was required that **all** state lives
 
 The idea of [Smart and Dumb](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) components was used as much as possible.
 
----
 
 ## API
 
 This applications consumes data from an API designed by Udacity specifically for the assignment, which can be found on [Udacity's GitHub](https://github.com/udacity/reactnd-project-readable-starter).
 A copy of their repository is present here (on `server/` folder) so both could be deployed together.
 
----
 
 ## Installation
 
@@ -67,8 +63,6 @@ $ npm install
 $ cd server/
 $ npm install
 ```
-
----
 
 ## Development
 
@@ -96,8 +90,6 @@ with the correct API URL.
 $ REACT_APP_API_SERVER=http://localhost:3000 npm start
 ```
 
----
-
 ## Build
 
 Build the app for production to the `build` folder.
@@ -106,7 +98,7 @@ Build the app for production to the `build` folder.
 $ cd reactnd-project-readable/
 $ npm run build
 ```
----
+
 
 ## Lint
 
@@ -116,7 +108,7 @@ Run lint tools.
 $ cd reactnd-project-readable/
 $ npm run eslint
 ```
----
+
 
 ## Deploy
 
@@ -129,7 +121,7 @@ $ npm run build
 $ mv build server/react_build
 $ git push heroku `git subtree split --prefix server master`:master --force
 ```
----
+
 
 ## Contributing
 
@@ -139,8 +131,12 @@ $ git push heroku `git subtree split --prefix server master`:master --force
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
----
 
 ## Contributors
 
 * Fernando Brito ([fernandobrito](https://github.com/fernandobrito))
+
+
+## License
+
+This project is licensed under the MIT License. Check the `LICENSE` file.
